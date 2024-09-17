@@ -9,4 +9,30 @@ Features
     Error Handling: Gracefully handles errors and provides informative messages if something goes wrong.
     Installation
     Clone the Repository:
-    
+    gitclone 
+https://github.com/cyber-rivet/cybervideo-downlaod.git
+cd cyber-rivet
+pip install yt-dlp
+chmod +x cyber_rivet_downloader.py
+./cyber_rivet_downloader.py "yt url paste hare"
+__          __  _                            _   __     
+\ \        / / | |                          | |  \ \    
+ \ \  /\  / /__| | ___ ___  _ __ ___   ___ | |_  \ \   
+  \ \/  \/ / _ \ |/ __/ _ \| '_ ` _ \ / _ \| __|  \ \  
+   \  /\  /  __/ | (_| (_) | | | | | |  __/| |_    / /  
+    \/  \/ \___|_|\___\___/|_| |_| |_|\___| \__|  /_/  
+                                                  
+Tool: Cyber Rivet
+Description: A stylish Python tool for downloading YouTube videos.
+Made by: Cyber Rivet
+===============================================================
+
+Title: Example Video Title
+Downloading to: /path/to/download/directory
+Download completed!
+Contributing
+
+Contributions are welcome! Feel free to submit issues, pull requests, or suggestions.
+License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
