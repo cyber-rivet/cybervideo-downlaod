@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-import os
 import sys
 from yt_dlp import YoutubeDL
 
@@ -19,10 +18,23 @@ def banner():
     ================================================================
     """)
 
-def download_video(url):
+def list_formats(url):
+    """List available formats for the given URL."""
     try:
         ydl_opts = {
-            'format': 'best',
+            'quiet': True,
+            'listformats': True,
+        }
+        with YoutubeDL(ydl_opts) as ydl:
+            ydl.extract_info(url)
+    except Exception as e:
+        print(f"An error occurred while listing formats: {e}")
+
+def download_video(url):
+    """Download the video from the given URL."""
+    try:
+        ydl_opts = {
+            'format': 'bestvideo+bestaudio/best',
         }
         with YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(url, download=True)
@@ -30,16 +42,19 @@ def download_video(url):
             print("Download completed!")
     except Exception as e:
         print(f"An error occurred: {e}")
+        print("Attempting to list available formats...")
+        list_formats(url)
 
 def main():
-    if len(sys.argv) < 2:
-        print("Usage: cyber_rivet_downloader.py <YouTube URL>")
-        sys.exit(1)
-
-    url = sys.argv[1]
-
     # Display banner and message
     banner()
+
+    # Prompt user for YouTube URL
+    url = input("Please enter the YouTube video URL: ").strip()
+
+    if not url:
+        print("No URL provided. Exiting.")
+        sys.exit(1)
 
     # Download the video
     download_video(url)
