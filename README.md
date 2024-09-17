@@ -5,14 +5,10 @@ Features
 
     
     Installation
-    Clone the Repository:https://github.com/cyber-rivet/cybervideo-downlaod.git #cd cyber-rivet #pip install yt-dlp #chmod +x cyber_rivet_downloader.py#./cyber_rivet_downloader.py "yt url paste hare"
+    #https://github.com/cyber-rivet/cybervideo-downlaod  #chmod +x cyber_rivet_downloader.py #
+    pip install yt-dlp #./cyber_rivet_downloader.py
+ and paste url enjoy tool
 
-
-    
-Elegant Design: The tool includes a custom banner with a modern design, showcasing the tool’s name, description, and creator information.
-    Efficient Downloading: Utilizes yt-dlp to download YouTube videos in the highest available quality.
-    Simple Usage: Easy-to-use command-line interface. Just provide the YouTube URL and start the download.
-    Error Handling: Gracefully handles errors and provides informative messages if something goes wrong.
 
 __          __  _                            _   __     
 \ \        / / | |                          | |  \ \    
